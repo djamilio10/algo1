@@ -1,18 +1,30 @@
 ALGORITHM nombre_de_mot
 VAR
-    phrase : STRING;
+    phrase, Nbr_voyelles : STRING;
     NbrCaractere, nombre_de_mot : INTEGER;
 BEGIN
     Write("entrez une phrase de votre choix:")
     Read ("phrase")
     NbrCaractere := phrase.length
-    Write("nombre de caractere",NbrCaractere)
+    Write(" le nombre de caractere est de:",NbrCaractere)
 
     FOR i FROM 0 TO phrase.length STEP 1  DO
         IF (phrase[i] === " ") THEN
-            NbrCaractere = NbrCaractere +1
+            nombre_de_mot := nombre_de_mot +1
         END_IF
     END_FOR
+    Write("le nombre de mot est de:" ,nombre_de_mot)
+    FOR i FROM 0 TO phrase.length STEP 1  DO
+        IF (phrase[i] === "a" || "e" || "i" || "u" || "o" || "y") THEN
+            Nbr_voyelles := Nbr_voyelles +1
+        END_IF
+    END_FOR
+    Write("le nombre de voyelles est de:" ,Nbr_voyelles)
+    
+    
+    
+
+
 
 
 END
