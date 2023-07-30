@@ -1,0 +1,18 @@
+ALGORITHM nombre_de_mot
+VAR
+    phrase : STRING;
+    NbrCaractere, nombre_de_mot : INTEGER;
+BEGIN
+    Write("entrez une phrase de votre choix:")
+    Read ("phrase")
+    NbrCaractere := phrase.length
+    Write("nombre de caractere",NbrCaractere)
+
+    FOR i FROM 0 TO phrase.length STEP 1  DO
+        IF (phrase[i] === " ") THEN
+            NbrCaractere = NbrCaractere +1
+        END_IF
+    END_FOR
+
+
+END
